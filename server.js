@@ -102,6 +102,6 @@ app.put('/image', (req, res) => {
 		.catch(err => res.status(400).json('unable to update entries'))
 })
 
-app.listen(3100, () => {
-	console.log('app is running on port 3000');
+app.listen(process.env.PORT || 3000, () => {
+	console.log(`app is running on port 3000 ${process.env.PORT}`);
 })
